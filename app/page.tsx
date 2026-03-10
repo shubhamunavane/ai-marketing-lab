@@ -27,9 +27,9 @@ export default function Home() {
       </div>
 
       <div className="mx-auto max-w-5xl px-6 pb-24">
-        {/* Latest AI Tools */}
+        {/* AI Marketing Insights */}
         {tools.length > 0 && (
-          <HomeSection title="Latest AI Tools" href="/tools" delay={0}>
+          <HomeSection title="AI Marketing Insights" href="/tools" delay={0}>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {tools.map((post) => (
                 <PostCard key={post.slug} {...post} />
@@ -38,22 +38,22 @@ export default function Home() {
           </HomeSection>
         )}
 
-        {/* Latest AI Updates */}
-        {updates.length > 0 && (
-          <HomeSection title="Latest AI Updates" href="/updates" delay={0.05}>
+        {/* AI Marketing Guides */}
+        {guides.length > 0 && (
+          <HomeSection title="AI Marketing Guides" href="/guides" delay={0.05}>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {updates.map((post) => (
+              {guides.map((post) => (
                 <PostCard key={post.slug} {...post} />
               ))}
             </div>
           </HomeSection>
         )}
 
-        {/* Latest Guides */}
-        {guides.length > 0 && (
-          <HomeSection title="Latest Guides" href="/guides" delay={0.1}>
+        {/* AI Marketing Updates */}
+        {updates.length > 0 && (
+          <HomeSection title="AI Marketing Updates" href="/updates" delay={0.1}>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {guides.map((post) => (
+              {updates.map((post) => (
                 <PostCard key={post.slug} {...post} />
               ))}
             </div>
