@@ -32,5 +32,5 @@
   <!-- VS divider -->
   <circle cx="600" cy="315" r="28" fill="rgba(255,255,255,0.15)"/>
   <text x="600" y="323" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="rgba(255,255,255,0.6)" text-anchor="middle">VS</text>
-  <text x="600" y="70" font-family="system-ui, sans-serif" font-size="18" font-weight="600" fill="rgba(255,255,255,0.6)" text-anchor="middle">AI MARKETING LAB</text>
+  <text x="600" y="70" font-family="system-ui, sans-serif" font-size="18" font-weight="600" fill="rgba(255,255,255,0.6)" text-anchor="middle">AI MARKET LAB</text>
 </svg>

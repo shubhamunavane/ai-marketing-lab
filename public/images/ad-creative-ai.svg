@@ -24,5 +24,5 @@
   <rect x="520" y="378" width="24" height="24" rx="4" fill="rgba(255,255,255,0.3)"/>
   <rect x="560" y="383" width="180" height="14" rx="4" fill="rgba(255,255,255,0.2)"/>
   <circle cx="1000" y="190" r="16" fill="#34d399" opacity="0.8"/>
-  <text x="600" y="80" font-family="system-ui, sans-serif" font-size="18" font-weight="600" fill="rgba(255,255,255,0.6)">AI MARKETING LAB</text>
+  <text x="600" y="80" font-family="system-ui, sans-serif" font-size="18" font-weight="600" fill="rgba(255,255,255,0.6)">AI MARKET LAB</text>
 </svg>

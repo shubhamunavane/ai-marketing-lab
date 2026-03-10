@@ -11,20 +11,20 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "AI Marketing Lab",
-    template: "%s | AI Marketing Lab",
+    default: "AI Market Lab",
+    template: "%s | AI Market Lab",
   },
   description:
     "AI tools, updates and practical guides for media buyers and advertisers.",
   openGraph: {
-    title: "AI Marketing Lab",
+    title: "AI Market Lab",
     description:
       "AI tools, updates and practical guides for media buyers and advertisers.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Marketing Lab",
+    title: "AI Market Lab",
     description:
       "AI tools, updates and practical guides for media buyers and advertisers.",
   },

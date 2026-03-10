@@ -8,7 +8,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="max-w-xs">
             <p className="text-[15px] font-semibold tracking-tight text-[var(--color-foreground)]">
-              AI Marketing Lab
+              AI Market Lab
             </p>
             <p className="mt-2 text-sm leading-relaxed text-[var(--color-muted)]">
               Helping marketers understand AI.
@@ -58,7 +58,7 @@ export default function Footer() {
 
         <div className="mt-12 border-t border-[var(--color-border)] pt-6">
           <p className="text-xs text-[var(--color-muted)]">
-            &copy; {new Date().getFullYear()} AI Marketing Lab
+            &copy; {new Date().getFullYear()} AI Market Lab
           </p>
         </div>
       </div>

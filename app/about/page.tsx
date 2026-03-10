@@ -4,19 +4,19 @@ import NewsletterSignup from "@/components/NewsletterSignup";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about AI Marketing Lab and our mission to help media buyers and advertisers leverage AI.",
+    "Learn about AI Market Lab and our mission to help media buyers and advertisers leverage AI.",
 };
 
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-2xl px-6 py-16">
       <h1 className="heading-section mb-8 text-[var(--color-foreground)]">
-        About AI Marketing Lab
+        About AI Market Lab
       </h1>
 
       <div className="mb-16 space-y-5">
         <p className="text-base leading-[1.7] text-[var(--color-secondary)]">
-          AI Marketing Lab is your go-to resource for AI-powered marketing. We
+          AI Market Lab is your go-to resource for AI-powered marketing. We
           help media buyers and advertisers stay ahead of the curve by curating
           the best AI tools, sharing the latest platform updates, and publishing
           practical guides.
