@@ -10,15 +10,14 @@ export const metadata: Metadata = {
 
 export default function ToolsPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 py-12">
-      <div className="mb-10">
-        <h1 className="mb-3 text-3xl font-bold text-[var(--color-foreground)] md:text-4xl">
+    <div className="mx-auto max-w-5xl px-6 py-16">
+      <div className="mb-12">
+        <h1 className="heading-section mb-3 text-[var(--color-foreground)]">
           AI Tools Directory
         </h1>
-        <p className="max-w-2xl text-lg text-[var(--color-muted)]">
+        <p className="max-w-lg text-sm leading-relaxed text-[var(--color-muted)]">
           Curated collection of the best AI-powered tools for media buyers and
-          advertisers. Find the right tools to automate, create, analyze, and
-          write better ads.
+          advertisers.
         </p>
       </div>
 

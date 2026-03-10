@@ -12,24 +12,25 @@ export default function UpdatesPage() {
   const posts = getPostsByCategory("updates");
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-12">
-      <div className="mb-10">
-        <h1 className="mb-3 text-3xl font-bold text-[var(--color-foreground)] md:text-4xl">
+    <div className="mx-auto max-w-5xl px-6 py-16">
+      <div className="mb-12">
+        <h1 className="heading-section mb-3 text-[var(--color-foreground)]">
           AI Updates
         </h1>
-        <p className="text-lg text-[var(--color-muted)]">
-          Stay up to date with the latest AI news relevant to advertisers.
+        <p className="max-w-lg text-sm leading-relaxed text-[var(--color-muted)]">
+          The latest AI news and platform changes relevant to advertisers and
+          media buyers.
         </p>
       </div>
       {posts.length > 0 ? (
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {posts.map((post) => (
             <PostCard key={post.slug} {...post} />
           ))}
         </div>
       ) : (
-        <p className="text-[var(--color-muted)]">
-          No updates yet. Check back soon!
+        <p className="text-sm text-[var(--color-muted)]">
+          No updates yet. Check back soon.
         </p>
       )}
     </div>

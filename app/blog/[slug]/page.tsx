@@ -13,7 +13,9 @@ export async function generateStaticParams() {
   return slugs.map((slug) => ({ slug }));
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
   return {
@@ -47,40 +49,46 @@ export default async function BlogPost({ params }: PageProps) {
   const cat = categoryLabels[post.category];
 
   return (
-    <div className="mx-auto max-w-3xl px-4 py-12">
+    <div className="mx-auto max-w-2xl px-6 py-16">
+      {/* Header */}
       <div className="mb-8">
-        <div className="mb-4 flex items-center gap-3 text-sm text-[var(--color-muted)]">
+        <div className="mb-4 flex items-center gap-3 text-[13px]">
           <Link
             href={cat?.href || "/"}
-            className="text-[var(--color-accent)] hover:text-[var(--color-accent-hover)]"
+            className="text-[var(--color-accent)] transition-colors hover:text-[var(--color-accent-hover)]"
           >
             {cat?.label || post.category}
           </Link>
-          <span>&middot;</span>
-          <time>{post.date}</time>
+          <span className="text-[var(--color-border)]">/</span>
+          <time className="text-[var(--color-muted)]">{post.date}</time>
         </div>
-        <h1 className="text-3xl font-extrabold tracking-tight text-[var(--color-foreground)] md:text-4xl">
+        <h1 className="text-2xl font-semibold leading-tight tracking-tight text-[var(--color-foreground)] md:text-3xl" style={{ letterSpacing: "-0.02em" }}>
           {post.title}
         </h1>
       </div>
 
+      {/* Featured image */}
       {post.featuredImage && (
-        <div className="relative mb-10 aspect-[16/9] w-full overflow-hidden rounded-xl">
+        <div className="relative mb-10 aspect-[16/9] w-full overflow-hidden rounded-xl border border-[var(--color-border)]">
           <Image
             src={post.featuredImage}
             alt={post.title}
             fill
             priority
             className="object-cover"
-            sizes="(max-width: 768px) 100vw, 768px"
+            sizes="(max-width: 768px) 100vw, 672px"
           />
         </div>
       )}
 
+      {/* Content */}
       <article
-        className="prose mb-12"
+        className="prose mb-16"
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}
       />
+
+      {/* Divider */}
+      <div className="mb-12 border-t border-[var(--color-border)]" />
 
       <NewsletterSignup />
     </div>

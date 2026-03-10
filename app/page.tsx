@@ -2,6 +2,8 @@ import Link from "next/link";
 import { getPostsByCategory } from "@/lib/posts";
 import PostCard from "@/components/PostCard";
 import NewsletterSignup from "@/components/NewsletterSignup";
+import HomeHero from "@/components/HomeHero";
+import HomeSection from "@/components/HomeSection";
 
 export default function Home() {
   const tools = getPostsByCategory("tools").slice(0, 3);
@@ -9,100 +11,60 @@ export default function Home() {
   const guides = getPostsByCategory("guides").slice(0, 3);
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-12">
-      {/* Hero */}
-      <section className="py-16 text-center md:py-24">
-        <h1 className="mb-4 text-4xl font-extrabold tracking-tight text-[var(--color-foreground)] md:text-6xl">
-          AI Marketing Lab
-        </h1>
-        <p className="mx-auto mb-8 max-w-2xl text-lg text-[var(--color-muted)] md:text-xl">
-          AI tools, updates and practical guides for media buyers and
-          advertisers.
-        </p>
-        <div className="flex justify-center gap-4">
-          <Link
-            href="/tools"
-            className="rounded-lg bg-[var(--color-accent)] px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-[var(--color-accent-hover)]"
-          >
-            Explore Tools
-          </Link>
-          <Link
-            href="/guides"
-            className="rounded-lg border border-[var(--color-border)] px-6 py-3 text-sm font-medium text-[var(--color-foreground)] transition-colors hover:bg-[var(--color-card)]"
-          >
-            Read Guides
-          </Link>
+    <>
+      {/* Hero with radial gradient */}
+      <div className="relative">
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse 80% 50% at 50% 0%, rgba(124,140,255,0.12), transparent 60%)",
+          }}
+        />
+        <div className="mx-auto max-w-5xl px-6">
+          <HomeHero />
         </div>
-      </section>
+      </div>
 
-      {/* Latest AI Tools */}
-      {tools.length > 0 && (
-        <section className="mb-16">
-          <div className="mb-6 flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-[var(--color-foreground)]">
-              Latest AI Tools
-            </h2>
-            <Link
-              href="/tools"
-              className="text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent-hover)]"
-            >
-              View all &rarr;
-            </Link>
-          </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {tools.map((post) => (
-              <PostCard key={post.slug} {...post} />
-            ))}
-          </div>
-        </section>
-      )}
+      <div className="mx-auto max-w-5xl px-6 pb-24">
+        {/* Latest AI Tools */}
+        {tools.length > 0 && (
+          <HomeSection title="Latest AI Tools" href="/tools" delay={0}>
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {tools.map((post) => (
+                <PostCard key={post.slug} {...post} />
+              ))}
+            </div>
+          </HomeSection>
+        )}
 
-      {/* Latest AI Updates */}
-      {updates.length > 0 && (
-        <section className="mb-16">
-          <div className="mb-6 flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-[var(--color-foreground)]">
-              Latest AI Updates
-            </h2>
-            <Link
-              href="/updates"
-              className="text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent-hover)]"
-            >
-              View all &rarr;
-            </Link>
-          </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {updates.map((post) => (
-              <PostCard key={post.slug} {...post} />
-            ))}
-          </div>
-        </section>
-      )}
+        {/* Latest AI Updates */}
+        {updates.length > 0 && (
+          <HomeSection title="Latest AI Updates" href="/updates" delay={0.05}>
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {updates.map((post) => (
+                <PostCard key={post.slug} {...post} />
+              ))}
+            </div>
+          </HomeSection>
+        )}
 
-      {/* Latest AI Guides */}
-      {guides.length > 0 && (
-        <section className="mb-16">
-          <div className="mb-6 flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-[var(--color-foreground)]">
-              Latest AI Guides
-            </h2>
-            <Link
-              href="/guides"
-              className="text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent-hover)]"
-            >
-              View all &rarr;
-            </Link>
-          </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {guides.map((post) => (
-              <PostCard key={post.slug} {...post} />
-            ))}
-          </div>
-        </section>
-      )}
+        {/* Latest Guides */}
+        {guides.length > 0 && (
+          <HomeSection title="Latest Guides" href="/guides" delay={0.1}>
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {guides.map((post) => (
+                <PostCard key={post.slug} {...post} />
+              ))}
+            </div>
+          </HomeSection>
+        )}
 
-      {/* Newsletter */}
-      <NewsletterSignup />
-    </div>
+        {/* Newsletter */}
+        <div className="mt-20">
+          <NewsletterSignup />
+        </div>
+      </div>
+    </>
   );
 }

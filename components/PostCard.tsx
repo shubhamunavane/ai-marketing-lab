@@ -11,11 +11,12 @@ interface PostCardProps {
 }
 
 const categoryColors: Record<string, string> = {
-  tools: "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400",
+  tools:
+    "bg-[var(--color-accent-muted)] text-[var(--color-accent)]",
   updates:
-    "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400",
+    "bg-emerald-500/10 text-emerald-400",
   guides:
-    "bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-400",
+    "bg-violet-500/10 text-violet-400",
 };
 
 export default function PostCard({
@@ -27,32 +28,38 @@ export default function PostCard({
   featuredImage,
 }: PostCardProps) {
   return (
-    <Link href={`/blog/${slug}`} className="group block">
-      <article className="flex h-full flex-col overflow-hidden rounded-xl border border-[var(--color-border)] bg-[var(--color-card)] transition-all duration-200 hover:border-[var(--color-accent)] hover:shadow-lg">
+    <Link href={`/blog/${slug}`} className="group block h-full">
+      <article className="card-hover flex h-full flex-col overflow-hidden rounded-xl border border-[var(--color-border)] bg-[var(--color-card)]">
         {featuredImage && (
           <div className="relative aspect-[16/9] w-full overflow-hidden">
             <Image
               src={featuredImage}
               alt={title}
               fill
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-card)] via-transparent to-transparent opacity-40" />
           </div>
         )}
         <div className="flex flex-1 flex-col p-5">
           <div className="mb-3 flex items-center gap-3">
             <span
-              className={`rounded-full px-3 py-1 text-xs font-medium ${categoryColors[category] || "bg-gray-100 text-gray-800 dark:bg-gray-900/30 dark:text-gray-400"}`}
+              className={`rounded-full px-2.5 py-0.5 text-[11px] font-medium ${
+                categoryColors[category] ||
+                "bg-[var(--color-accent-muted)] text-[var(--color-accent)]"
+              }`}
             >
               {category.charAt(0).toUpperCase() + category.slice(1)}
             </span>
-            <time className="text-xs text-[var(--color-muted)]">{date}</time>
+            <time className="text-[11px] text-[var(--color-muted)]">
+              {date}
+            </time>
           </div>
-          <h3 className="mb-2 text-lg font-semibold text-[var(--color-foreground)] transition-colors group-hover:text-[var(--color-accent)]">
+          <h3 className="mb-2 text-[15px] font-semibold leading-snug text-[var(--color-foreground)] transition-colors duration-200 group-hover:text-[var(--color-accent)]">
             {title}
           </h3>
-          <p className="text-sm leading-relaxed text-[var(--color-muted)]">
+          <p className="text-[13px] leading-relaxed text-[var(--color-muted)]">
             {excerpt}
           </p>
         </div>

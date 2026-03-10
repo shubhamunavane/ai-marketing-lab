@@ -10,14 +10,10 @@ interface ToolCardProps {
 }
 
 const categoryColors: Record<string, string> = {
-  Creative:
-    "bg-pink-100 text-pink-800 dark:bg-pink-900/30 dark:text-pink-400",
-  Analytics:
-    "bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400",
-  Automation:
-    "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400",
-  Copywriting:
-    "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400",
+  Creative: "bg-pink-500/10 text-pink-400",
+  Analytics: "bg-sky-500/10 text-sky-400",
+  Automation: "bg-emerald-500/10 text-emerald-400",
+  Copywriting: "bg-amber-500/10 text-amber-400",
 };
 
 export default function ToolCard({
@@ -29,26 +25,26 @@ export default function ToolCard({
   useCase,
 }: ToolCardProps) {
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-xl border border-[var(--color-border)] bg-[var(--color-card)] transition-all duration-200 hover:border-[var(--color-accent)] hover:shadow-lg">
-      {/* Header with logo and name */}
-      <div className="flex items-center gap-4 border-b border-[var(--color-border)] p-5">
-        <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-xl">
+    <article className="card-hover group flex h-full flex-col overflow-hidden rounded-xl border border-[var(--color-border)] bg-[var(--color-card)]">
+      {/* Header */}
+      <div className="flex items-center gap-3.5 border-b border-[var(--color-border)] p-5">
+        <div className="relative h-10 w-10 flex-shrink-0 overflow-hidden rounded-lg">
           <Image
             src={logo}
             alt={`${name} logo`}
             fill
             className="object-cover"
-            sizes="48px"
+            sizes="40px"
           />
         </div>
         <div className="min-w-0 flex-1">
-          <h3 className="text-lg font-semibold text-[var(--color-foreground)] transition-colors group-hover:text-[var(--color-accent)]">
+          <h3 className="text-[15px] font-semibold text-[var(--color-foreground)] transition-colors group-hover:text-[var(--color-accent)]">
             {name}
           </h3>
           <span
-            className={`mt-1 inline-block rounded-full px-2.5 py-0.5 text-xs font-medium ${
+            className={`mt-0.5 inline-block rounded-full px-2 py-0.5 text-[10px] font-medium ${
               categoryColors[category] ||
-              "bg-gray-100 text-gray-800 dark:bg-gray-900/30 dark:text-gray-400"
+              "bg-[var(--color-accent-muted)] text-[var(--color-accent)]"
             }`}
           >
             {category}
@@ -58,16 +54,16 @@ export default function ToolCard({
 
       {/* Body */}
       <div className="flex flex-1 flex-col p-5">
-        <p className="mb-4 text-sm leading-relaxed text-[var(--color-muted)]">
+        <p className="mb-4 text-[13px] leading-relaxed text-[var(--color-muted)]">
           {description}
         </p>
 
         {/* Use case */}
-        <div className="mb-5 rounded-lg bg-[var(--color-accent)]/5 p-3">
-          <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-[var(--color-accent)]">
+        <div className="mb-5 rounded-lg border border-[var(--color-border)] bg-[var(--color-background)] p-3.5">
+          <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-widest text-[var(--color-accent)]">
             Use Case
           </p>
-          <p className="text-sm leading-relaxed text-[var(--color-foreground)]">
+          <p className="text-[13px] leading-relaxed text-[var(--color-secondary)]">
             {useCase}
           </p>
         </div>
@@ -78,13 +74,12 @@ export default function ToolCard({
             href={website}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg bg-[var(--color-accent)] px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-[var(--color-accent-hover)]"
+            className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[var(--color-accent)] transition-colors hover:text-[var(--color-accent-hover)]"
           >
             Visit Website
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="14"
+              width="13"
+              height="13"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"

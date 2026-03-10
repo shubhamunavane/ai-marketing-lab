@@ -2,67 +2,64 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[var(--color-border)] bg-[var(--color-card)]">
-      <div className="mx-auto max-w-6xl px-4 py-12">
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          <div>
-            <h3 className="mb-3 text-lg font-bold text-[var(--color-accent)]">
+    <footer className="border-t border-[var(--color-border)] bg-[var(--color-background)]">
+      <div className="mx-auto max-w-5xl px-6 py-12">
+        <div className="flex flex-col justify-between gap-8 md:flex-row md:items-start">
+          {/* Brand */}
+          <div className="max-w-xs">
+            <p className="text-[15px] font-semibold tracking-tight text-[var(--color-foreground)]">
               AI Marketing Lab
-            </h3>
-            <p className="text-sm text-[var(--color-muted)]">
-              AI tools, updates and practical guides for media buyers and
-              advertisers.
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-[var(--color-muted)]">
+              Helping marketers understand AI.
             </p>
           </div>
-          <div>
-            <h4 className="mb-3 text-sm font-semibold uppercase tracking-wider text-[var(--color-foreground)]">
-              Pages
-            </h4>
-            <ul className="space-y-2">
-              {[
-                { href: "/", label: "Home" },
-                { href: "/tools", label: "AI Tools" },
-                { href: "/updates", label: "AI Updates" },
-                { href: "/guides", label: "AI Guides" },
-              ].map((link) => (
-                <li key={link.href}>
+
+          {/* Links */}
+          <div className="flex gap-12">
+            <div>
+              <p className="mb-3 text-xs font-medium uppercase tracking-widest text-[var(--color-muted)]">
+                Resources
+              </p>
+              <ul className="space-y-2.5">
+                {[
+                  { href: "/tools", label: "Tools" },
+                  { href: "/updates", label: "Updates" },
+                  { href: "/guides", label: "Guides" },
+                ].map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-[var(--color-secondary)] transition-colors hover:text-[var(--color-foreground)]"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="mb-3 text-xs font-medium uppercase tracking-widest text-[var(--color-muted)]">
+                Company
+              </p>
+              <ul className="space-y-2.5">
+                <li>
                   <Link
-                    href={link.href}
-                    className="text-sm text-[var(--color-muted)] transition-colors hover:text-[var(--color-foreground)]"
+                    href="/about"
+                    className="text-sm text-[var(--color-secondary)] transition-colors hover:text-[var(--color-foreground)]"
                   >
-                    {link.label}
+                    About
                   </Link>
                 </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h4 className="mb-3 text-sm font-semibold uppercase tracking-wider text-[var(--color-foreground)]">
-              Company
-            </h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/about"
-                  className="text-sm text-[var(--color-muted)] transition-colors hover:text-[var(--color-foreground)]"
-                >
-                  About
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="mb-3 text-sm font-semibold uppercase tracking-wider text-[var(--color-foreground)]">
-              Stay Updated
-            </h4>
-            <p className="text-sm text-[var(--color-muted)]">
-              Subscribe to get the latest AI marketing insights.
-            </p>
+              </ul>
+            </div>
           </div>
         </div>
-        <div className="mt-10 border-t border-[var(--color-border)] pt-6 text-center text-sm text-[var(--color-muted)]">
-          &copy; {new Date().getFullYear()} AI Marketing Lab. All rights
-          reserved.
+
+        <div className="mt-12 border-t border-[var(--color-border)] pt-6">
+          <p className="text-xs text-[var(--color-muted)]">
+            &copy; {new Date().getFullYear()} AI Marketing Lab
+          </p>
         </div>
       </div>
     </footer>
