@@ -1,73 +1,85 @@
 ---
-title: "Latest AI Updates from Google and Meta"
+title: "Google, Meta & TikTok AI Ad Updates: What Changed in Early 2026"
 date: "2026-03-09"
 category: "updates"
-excerpt: "A roundup of the latest AI-powered features and changes from Google Ads and Meta Ads."
+excerpt: "A breakdown of the latest AI-powered advertising features from Google Ads, Meta Ads, and TikTok — and what they mean for media buyers."
 ---
 
-## What's New in AI for Advertisers
+## The Platforms Are Going All-In on AI
 
-Google and Meta continue to roll out AI-powered features that are changing how advertisers run campaigns. Here's a roundup of the most important recent updates.
+Every major ad platform is pushing AI automation harder than ever. Google introduced its Power Pack framework, Meta made Advantage+ the default, and TikTok upgraded Smart+ campaigns with new controls. Here's what actually changed and what it means for your campaigns.
 
-## Google Ads AI Updates
+## Google Ads: The Power Pack Era
 
-### Performance Max Enhancements
+### AI Max for Search
 
-Google has expanded Performance Max campaigns with new AI capabilities:
+AI Max is Google's fastest-growing AI search product. It layers AI features on top of your existing Search campaigns — not a new campaign type, but a set of targeting and creative enhancements. Campaigns using Smart Bidding Exploration see an average 18% increase in unique search query categories with conversions and a 19% increase in conversions.
 
-- **AI-generated creative assets** — Google now automatically generates ad headlines, descriptions, and images using generative AI
-- **Improved audience signals** — Better AI-driven audience targeting based on search intent and browsing behavior
-- **Enhanced reporting** — More transparent reporting on how AI is allocating budget across channels
+### Performance Max Upgrades
 
-### Search Ads and AI Overviews
+Google shipped over 90 quality improvements to Performance Max, increasing conversions and conversion value by more than 10%. Key new features include:
 
-With Google's AI Overviews appearing in more search results, advertisers need to adapt:
+- **Campaign-level negative keywords** — finally rolled out to all advertisers
+- **High-value new customer mode** — specify your high-value customers via Customer Match, and Google AI predicts which new users will maximize lifetime value
+- **Age-based demographic exclusions** and **device targeting** betas
 
-- Ads are being integrated alongside AI-generated answers
-- Keyword strategies may need updating as search behavior changes
-- New ad placements within AI Overview results are being tested
+### Gemini-Powered Creative Tools
 
-### Demand Gen Campaigns
+Gemini usage in Google Ads exploded — nearly 70 million creative assets were generated in Q4 2025 alone (a 3x increase year-over-year). New tools include Veo 3 for video generation in Asset Studio, plus AI-powered video extension and automatic aspect ratio resizing.
 
-Google's Demand Gen campaigns use AI to serve visually rich ads across YouTube, Gmail, and Discover:
+### Text Guidelines (February 2026)
 
-- New AI-powered lookalike segments for better targeting
-- Automated creative optimization across placements
-- Video ad generation tools in beta
+On February 26, 2026, Google opened text guidelines to all advertisers worldwide in both AI Max and Performance Max. This acts as a governance layer — you define what the AI is and isn't allowed to write, while text customization generates headlines and descriptions in real time to match search intent.
 
-## Meta Ads AI Updates
+### Ads in AI Overviews & AI Mode
 
-### Advantage+ Campaign Improvements
+Google expanded ads in AI Overviews to desktop and more countries globally. They're also testing ads in AI Mode in the US — giving advertisers access to moments where people ask deeper, more complex questions on Search.
 
-Meta's Advantage+ suite continues to expand:
+## Meta Ads: Advantage+ Is Now the Default
 
-- **Advantage+ Shopping** — Enhanced AI-driven product catalog ads with better creative automation
-- **Advantage+ Audience** — Broader AI targeting that learns from conversion data faster
-- **Advantage+ Creative** — Automatic adjustments to ad creative including text, cropping, and music
+### Andromeda — The Engine Behind Everything
 
-### AI Creative Tools in Ads Manager
+Meta completed the global rollout of Andromeda in October 2025 — the new ad retrieval engine that decides which ads get considered before ranking even happens. Andromeda processes over 15 million new ad creatives monthly and fundamentally shifted Meta's approach: advertisers now provide creative variety, and the algorithm controls everything else.
 
-Meta has launched several new AI creative features:
+### Advantage+ Leads Campaigns
 
-- Text-to-image ad generation directly in Ads Manager
-- AI-powered background generation for product images
-- Automatic video editing and resizing for different placements
+One of the biggest 2025 changes — Advantage+ now supports lead generation, not just online sales. This brings AI automation to a whole new category of advertisers.
 
-### Messaging and Conversions AI
+### AI Creative Tools
 
-- AI-powered auto-responses for Messenger and WhatsApp ads
-- Improved conversion modeling using AI prediction
-- Better attribution across Meta's family of apps
+With Advantage+ Creative, one product photo can now turn into dozens of versions with different backgrounds, colors, and layouts — automatically sized for every placement. Meta is moving toward a Generative Ad Model (GEM) where advertisers will simply provide a product URL, budget, and basic prompt, and AI generates the entire campaign.
+
+### New Metrics: Creative Fatigue & Similarity
+
+Meta rolled out Creative Fatigue and Creative Similarity scores. High Creative Similarity raises your CPMs because Andromeda treats repetitive content as less valuable. This means creative variety is now directly tied to cost efficiency.
+
+### Attribution Changes
+
+Engaged-view attribution became standard with the threshold dropping from 10 seconds to 5. Incremental attribution lets you optimize for conversions that only happened because of your ad — a significant shift in how Meta measures value.
+
+## TikTok Ads: Smart+ Gets Smarter
+
+### Smart+ January 2026 Upgrades
+
+TikTok announced major Smart+ upgrades on January 21, 2026:
+
+- **Auto-select creatives** — AI scans your existing ads and eligible creator content, then recommends high-performing creatives tailored to your objectives
+- **Ad preview** — See every possible creative combination before it goes live
+- **Full workflow tools** — Campaign duplication, draft mode, automated rules, and bulk editing — features previously only available in manual campaigns
+
+### Symphony Automation
+
+TikTok's generative AI tools are now built directly into Smart+. Symphony offers Recommended Creatives (generates TikTok-ready videos from your product URL) and Automatic Enhancements (optimizes video quality, resizes for vertical, refreshes hooks, and translates content into 50+ languages).
+
+### Smart+ Catalog Ads
+
+Smart+ Catalog Ads convert static product catalogs into optimized shoppable ads. In closed beta, advertisers saw a 36% drop in CPA versus manual campaigns.
 
 ## What This Means for Media Buyers
 
-These updates signal a clear trend: **both platforms want AI to handle more of the campaign management process**. For media buyers, this means:
+The trend across all three platforms is identical: **your job shifted from controlling campaigns to feeding the system good inputs**.
 
-1. **Learn the AI tools** — Understanding how Advantage+ and Performance Max work is now essential
-2. **Focus on strategy** — As AI handles more execution, your value shifts to strategic decisions
-3. **Test aggressively** — AI features improve with data, so the sooner you test, the better your results
-4. **Monitor closely** — AI automation isn't perfect. Keep a close eye on performance and step in when needed
-
-## Stay Updated
-
-The AI landscape in advertising is moving fast. We'll continue tracking these updates and breaking down what they mean for your campaigns.
+1. **Creative variety is currency** — All three platforms reward diverse creative. Meta's Andromeda penalizes repetition with higher CPMs.
+2. **Learn the AI governance tools** — Google's text guidelines, Meta's value rules, TikTok's modular automation controls. These are how you steer AI without fighting it.
+3. **Start testing now** — Allocate 10-20% of budget to AI-automated campaigns. The systems improve with data — the sooner you start, the faster they learn.
+4. **Focus on post-click** — As platforms automate more of the ad delivery, your competitive advantage shifts to offers, landing pages, and the customer journey.
