@@ -414,4 +414,310 @@ For each variation, specify what to keep, what to cut, and what to add.`,
       },
     ],
   },
+  {
+    category: "Analytics",
+    prompts: [
+      {
+        id: "campaign-report",
+        title: "Generate a Campaign Performance Report",
+        description:
+          "Create a structured performance report from your ad campaign data.",
+        prompt: `Act as a data-driven marketing analyst. Generate a comprehensive campaign performance report based on the following data:
+
+[PLATFORM]:
+[CAMPAIGN NAME]:
+[DATE RANGE]:
+[TOTAL SPEND]:
+[IMPRESSIONS]:
+[CLICKS]:
+[CONVERSIONS]:
+[REVENUE (if applicable)]:
+
+Provide:
+1. Executive Summary (3-4 sentences, key takeaways)
+2. Key Metrics Breakdown
+   - CTR, CPC, CPM, CPA, ROAS
+   - Compare to industry benchmarks
+3. Performance Analysis
+   - What worked well and why
+   - What underperformed and possible reasons
+4. Audience Insights (based on available data)
+5. Creative Performance (if multiple creatives ran)
+6. Budget Efficiency Analysis
+7. Actionable Recommendations (prioritized list of 5-7 next steps)
+8. Suggested tests for the next reporting period
+
+Format the report in clear sections with headers. Use data to support every recommendation.`,
+      },
+      {
+        id: "attribution-model",
+        title: "Choose the Right Attribution Model",
+        description:
+          "Get recommendations on which attribution model fits your marketing setup.",
+        prompt: `Help me choose the right attribution model for my marketing setup:
+
+[BUSINESS TYPE]: E-commerce / SaaS / Lead Gen / App
+[MARKETING CHANNELS]: (list all active channels — e.g., Google Ads, Meta Ads, Email, SEO, TikTok)
+[AVERAGE SALES CYCLE]: Same day / 1-7 days / 1-4 weeks / 1-3 months / 3+ months
+[CURRENT ATTRIBUTION]: Last-click / First-click / Linear / None
+[MAIN CHALLENGE]:
+
+Provide:
+1. Analysis of my current attribution limitations
+2. Recommended attribution model with justification
+3. How to implement it (tools and settings needed)
+4. Common pitfalls to avoid with this model
+5. How to handle cross-device and cross-channel tracking
+6. Suggested reporting structure to get accurate insights
+7. How this model will change my budget allocation decisions
+
+Explain in practical terms how changing the attribution model will impact my day-to-day campaign decisions.`,
+      },
+      {
+        id: "kpi-dashboard",
+        title: "Design a Marketing KPI Dashboard",
+        description:
+          "Plan a KPI dashboard layout with the right metrics for your goals.",
+        prompt: `Help me design a marketing KPI dashboard for:
+
+[BUSINESS TYPE]: E-commerce / SaaS / Agency / Lead Gen
+[PRIMARY GOAL]: Revenue Growth / Lead Volume / Brand Awareness / Customer Retention
+[MARKETING CHANNELS]: (list all active)
+[REPORTING FREQUENCY]: Daily / Weekly / Monthly
+[STAKEHOLDERS]: CEO / CMO / Marketing Team / Client
+
+Provide:
+1. Top-Level KPIs (5-7 metrics that belong at the top of the dashboard)
+2. Channel-Specific Metrics (key metrics per active channel)
+3. Funnel Metrics (awareness → consideration → conversion → retention)
+4. Recommended Visualizations (chart types for each metric)
+5. Benchmarks and Targets (how to set realistic goals)
+6. Alert Thresholds (when to flag underperformance)
+7. Recommended Tools (free and paid dashboard options)
+
+For each metric, explain why it matters and how to act on it when it moves up or down.`,
+      },
+    ],
+  },
+  {
+    category: "SEO",
+    prompts: [
+      {
+        id: "keyword-research",
+        title: "AI-Powered Keyword Research",
+        description:
+          "Generate a targeted keyword strategy for any niche or product.",
+        prompt: `Act as an SEO specialist. Conduct keyword research for:
+
+[WEBSITE/BUSINESS]:
+[NICHE/INDUSTRY]:
+[TARGET AUDIENCE]:
+[BUSINESS GOAL]: Traffic / Leads / Sales / Brand Awareness
+[COMPETITORS]: (list 2-3 competitor domains if known)
+
+Provide:
+1. Primary Keywords (5-10 high-intent keywords)
+   - Include estimated search volume range and difficulty
+2. Long-Tail Keywords (15-20 specific phrases)
+   - Grouped by search intent (informational, commercial, transactional)
+3. Question Keywords (10 questions people ask in this niche)
+4. Content Gap Opportunities (topics competitors rank for that you don't)
+5. Keyword Clusters (group related keywords into content themes)
+6. Priority Ranking (which keywords to target first based on difficulty vs. opportunity)
+7. Content Type Recommendations (blog post, landing page, tool, video) for each cluster
+
+For each keyword, note whether it should be a new page, a blog post, or added to an existing page.`,
+      },
+      {
+        id: "seo-content-brief",
+        title: "Create an SEO Content Brief",
+        description:
+          "Generate a detailed content brief optimized for search rankings.",
+        prompt: `Create a comprehensive SEO content brief for:
+
+[TARGET KEYWORD]:
+[SECONDARY KEYWORDS]:
+[SEARCH INTENT]: Informational / Commercial / Transactional / Navigational
+[CONTENT TYPE]: Blog Post / Landing Page / Pillar Page / Product Page
+[TARGET WORD COUNT]:
+
+Provide:
+1. Title Tag (under 60 characters, includes primary keyword)
+2. Meta Description (under 155 characters, includes CTA)
+3. URL Slug (short, keyword-rich)
+4. Content Outline
+   - H1 headline
+   - H2 sections with brief descriptions
+   - H3 subsections where needed
+5. Key Points to Cover (based on top-ranking competitors)
+6. Internal Linking Suggestions (what pages to link to/from)
+7. External Sources to Reference
+8. Featured Snippet Opportunity (if applicable — format to win it)
+9. Schema Markup Recommendations
+10. Image/Visual Suggestions with alt text recommendations
+
+The brief should be detailed enough for any writer to produce a top-ranking article.`,
+      },
+      {
+        id: "technical-seo-audit",
+        title: "Technical SEO Audit Checklist",
+        description:
+          "Get a comprehensive technical SEO audit checklist for any website.",
+        prompt: `Generate a technical SEO audit checklist for:
+
+[WEBSITE URL]:
+[CMS/PLATFORM]: WordPress / Shopify / Custom / Next.js / Other
+[SITE SIZE]: Small (under 50 pages) / Medium (50-500) / Large (500+)
+[MAIN CONCERN]:
+
+Cover these areas with specific checks:
+
+1. CRAWLABILITY & INDEXATION
+   - Robots.txt configuration
+   - XML sitemap status
+   - Index coverage issues
+   - Crawl budget optimization
+
+2. SITE SPEED & CORE WEB VITALS
+   - LCP, FID/INP, CLS targets
+   - Image optimization checks
+   - JavaScript and CSS render-blocking
+   - Server response time
+
+3. MOBILE OPTIMIZATION
+   - Mobile-first indexing readiness
+   - Responsive design checks
+   - Tap target sizing
+
+4. ON-PAGE TECHNICAL ELEMENTS
+   - Title tags, meta descriptions, header hierarchy
+   - Canonical tags and duplicate content
+   - Structured data / schema markup
+   - Hreflang (if multilingual)
+
+5. SITE ARCHITECTURE
+   - URL structure
+   - Internal linking depth
+   - Breadcrumbs and navigation
+   - Orphan pages
+
+6. SECURITY & ACCESSIBILITY
+   - HTTPS and mixed content
+   - Accessibility basics (alt tags, ARIA)
+
+For each item, mark priority (critical / important / nice-to-have) and provide the fix if an issue is found.`,
+      },
+    ],
+  },
+  {
+    category: "Email Marketing",
+    prompts: [
+      {
+        id: "welcome-sequence",
+        title: "Write a Welcome Email Sequence",
+        description:
+          "Create an automated welcome series that converts new subscribers.",
+        prompt: `Write a 7-email welcome sequence for new subscribers:
+
+[BUSINESS/BRAND]:
+[PRODUCT/SERVICE]:
+[LEAD MAGNET]: (what did they sign up for?)
+[BRAND VOICE]: Professional / Casual / Bold / Friendly / Witty
+[PRIMARY GOAL]: Purchase / Book Demo / Upgrade / Engage
+
+For each email provide:
+1. Send timing (e.g., Immediately, Day 1, Day 3, etc.)
+2. Subject line + A/B variant
+3. Preview text
+4. Email body (150-200 words max)
+5. Primary CTA (button text + destination)
+6. P.S. line (optional but recommended)
+
+Sequence structure:
+Email 1 (Immediate): Deliver the lead magnet + warm welcome
+Email 2 (Day 1): Share your origin story or mission
+Email 3 (Day 3): Deliver unexpected value (tip, resource, tool)
+Email 4 (Day 5): Social proof — share a customer success story
+Email 5 (Day 7): Address the #1 objection
+Email 6 (Day 10): Make the primary offer
+Email 7 (Day 14): Final nudge with urgency or bonus
+
+Each email should feel personal, not promotional. Build trust before selling.`,
+      },
+      {
+        id: "subject-line-generator",
+        title: "Generate Email Subject Lines",
+        description:
+          "Create high-open-rate subject lines using proven formulas.",
+        prompt: `Generate 20 email subject lines for:
+
+[EMAIL PURPOSE]: Newsletter / Promotion / Product Launch / Cart Abandonment / Re-engagement / Event
+[PRODUCT/SERVICE]:
+[TARGET AUDIENCE]:
+[BRAND VOICE]: Professional / Casual / Bold / Playful
+
+Create subject lines using these formulas (2-3 per formula):
+
+1. Curiosity Gap — make them need to know more
+2. Urgency/Scarcity — time or quantity pressure
+3. Personal/Name — use personalization tokens
+4. Number/List — specific and scannable
+5. Question — spark a thought or challenge
+6. How-To/Benefit — promise a clear outcome
+7. Social Proof — reference others' success
+8. Controversy/Hot Take — challenge a common belief
+
+Rules:
+- Keep each under 50 characters (mobile-friendly)
+- Avoid spam trigger words (free, act now, limited time)
+- Include emoji options where appropriate (mark with 🏷️)
+- Test preview text suggestions for the top 5
+
+For each subject line, rate predicted open rate impact (high / medium / baseline).`,
+      },
+      {
+        id: "newsletter-content-plan",
+        title: "Plan a Monthly Newsletter Strategy",
+        description:
+          "Design a newsletter content calendar with engagement-focused topics.",
+        prompt: `Create a monthly newsletter content plan for:
+
+[BUSINESS/BRAND]:
+[INDUSTRY/NICHE]:
+[AUDIENCE]: (describe your subscriber base)
+[SEND FREQUENCY]: Weekly / Bi-weekly / Monthly
+[NEWSLETTER GOAL]: Engagement / Traffic / Sales / Thought Leadership
+
+Provide:
+1. Newsletter Format/Template
+   - Recommended sections and their order
+   - Ideal length (word count per section)
+   - Visual style recommendations
+
+2. Content Calendar (4 issues)
+   For each issue:
+   - Theme/Topic
+   - Subject line
+   - Main story/article idea (2-3 sentences)
+   - Secondary content blocks (quick tips, links, resources)
+   - CTA for each issue
+   - Engagement element (poll, question, reply prompt)
+
+3. Content Mix Strategy
+   - Percentage split: educational / promotional / entertainment / curated
+   - How to repurpose newsletter content for social media
+
+4. Growth Tactics
+   - 5 ways to grow the subscriber list
+   - Referral program ideas
+   - Cross-promotion opportunities
+
+5. Metrics to Track
+   - Open rate, CTR, unsubscribe rate targets
+   - How to segment based on engagement
+
+Make each issue valuable enough that subscribers look forward to it.`,
+      },
+    ],
+  },
 ];
