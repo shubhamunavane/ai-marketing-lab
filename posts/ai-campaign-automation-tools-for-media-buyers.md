@@ -3,6 +3,7 @@ title: "AI Campaign Automation Tools Every Media Buyer Should Know in 2026"
 date: "2026-03-07"
 category: "tools"
 excerpt: "From autonomous campaign management to rule-based optimization — the AI automation tools that are replacing manual media buying in 2026."
+featuredImage: "/images/campaign-automation.svg"
 ---
 
 ## The Era of Manual Media Buying Is Over

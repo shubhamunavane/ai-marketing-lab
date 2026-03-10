@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { getAllSlugs, getPostBySlug } from "@/lib/posts";
 import NewsletterSignup from "@/components/NewsletterSignup";
@@ -23,11 +24,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: post.excerpt,
       type: "article",
       publishedTime: post.date,
+      ...(post.featuredImage && { images: [{ url: post.featuredImage }] }),
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
+      ...(post.featuredImage && { images: [post.featuredImage] }),
     },
   };
 }
@@ -60,6 +63,19 @@ export default async function BlogPost({ params }: PageProps) {
           {post.title}
         </h1>
       </div>
+
+      {post.featuredImage && (
+        <div className="relative mb-10 aspect-[16/9] w-full overflow-hidden rounded-xl">
+          <Image
+            src={post.featuredImage}
+            alt={post.title}
+            fill
+            priority
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+        </div>
+      )}
 
       <article
         className="prose mb-12"

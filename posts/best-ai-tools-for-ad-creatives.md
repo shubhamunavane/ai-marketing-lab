@@ -3,6 +3,7 @@ title: "Best AI Tools for Ad Creatives in 2026"
 date: "2026-03-10"
 category: "tools"
 excerpt: "The top AI tools media buyers and advertisers are using right now to generate ad creatives faster, from image generators to full video ad platforms."
+featuredImage: "/images/ad-creative-ai.svg"
 ---
 
 ## The AI Creative Toolkit Has Exploded

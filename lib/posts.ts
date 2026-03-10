@@ -12,6 +12,7 @@ export interface PostMeta {
   date: string;
   category: string;
   excerpt: string;
+  featuredImage?: string;
 }
 
 export interface Post extends PostMeta {
@@ -34,6 +35,7 @@ export function getAllPosts(): PostMeta[] {
         date: data.date,
         category: data.category,
         excerpt: data.excerpt,
+        featuredImage: data.featuredImage || undefined,
       };
     });
 
@@ -67,6 +69,7 @@ export async function getPostBySlug(slug: string): Promise<Post> {
     date: data.date,
     category: data.category,
     excerpt: data.excerpt,
+    featuredImage: data.featuredImage || undefined,
     contentHtml,
   };
 }

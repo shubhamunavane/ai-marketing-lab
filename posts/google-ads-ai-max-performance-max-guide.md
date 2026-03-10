@@ -3,6 +3,7 @@ title: "Google Ads in 2026: The Complete AI Max & Performance Max Guide"
 date: "2026-03-04"
 category: "guides"
 excerpt: "How to use Google's Power Pack strategy — AI Max, Performance Max, and Demand Gen — to maximize campaign performance in 2026."
+featuredImage: "/images/google-ads-ai-max.svg"
 ---
 
 ## Google's Power Pack: The New Standard

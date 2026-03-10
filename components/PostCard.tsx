@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface PostCardProps {
   slug: string;
@@ -6,6 +7,7 @@ interface PostCardProps {
   date: string;
   category: string;
   excerpt: string;
+  featuredImage?: string;
 }
 
 const categoryColors: Record<string, string> = {
@@ -22,24 +24,38 @@ export default function PostCard({
   date,
   category,
   excerpt,
+  featuredImage,
 }: PostCardProps) {
   return (
     <Link href={`/blog/${slug}`} className="group block">
-      <article className="h-full rounded-xl border border-[var(--color-border)] bg-[var(--color-card)] p-6 transition-all duration-200 hover:border-[var(--color-accent)] hover:shadow-lg">
-        <div className="mb-3 flex items-center gap-3">
-          <span
-            className={`rounded-full px-3 py-1 text-xs font-medium ${categoryColors[category] || "bg-gray-100 text-gray-800 dark:bg-gray-900/30 dark:text-gray-400"}`}
-          >
-            {category.charAt(0).toUpperCase() + category.slice(1)}
-          </span>
-          <time className="text-xs text-[var(--color-muted)]">{date}</time>
+      <article className="flex h-full flex-col overflow-hidden rounded-xl border border-[var(--color-border)] bg-[var(--color-card)] transition-all duration-200 hover:border-[var(--color-accent)] hover:shadow-lg">
+        {featuredImage && (
+          <div className="relative aspect-[16/9] w-full overflow-hidden">
+            <Image
+              src={featuredImage}
+              alt={title}
+              fill
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            />
+          </div>
+        )}
+        <div className="flex flex-1 flex-col p-5">
+          <div className="mb-3 flex items-center gap-3">
+            <span
+              className={`rounded-full px-3 py-1 text-xs font-medium ${categoryColors[category] || "bg-gray-100 text-gray-800 dark:bg-gray-900/30 dark:text-gray-400"}`}
+            >
+              {category.charAt(0).toUpperCase() + category.slice(1)}
+            </span>
+            <time className="text-xs text-[var(--color-muted)]">{date}</time>
+          </div>
+          <h3 className="mb-2 text-lg font-semibold text-[var(--color-foreground)] transition-colors group-hover:text-[var(--color-accent)]">
+            {title}
+          </h3>
+          <p className="text-sm leading-relaxed text-[var(--color-muted)]">
+            {excerpt}
+          </p>
         </div>
-        <h3 className="mb-2 text-lg font-semibold text-[var(--color-foreground)] transition-colors group-hover:text-[var(--color-accent)]">
-          {title}
-        </h3>
-        <p className="text-sm leading-relaxed text-[var(--color-muted)]">
-          {excerpt}
-        </p>
       </article>
     </Link>
   );

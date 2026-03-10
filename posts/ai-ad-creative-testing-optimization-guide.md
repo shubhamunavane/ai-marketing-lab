@@ -3,6 +3,7 @@ title: "The 2026 Guide to AI-Powered Ad Creative Testing & Optimization"
 date: "2026-03-06"
 category: "guides"
 excerpt: "How to build a high-velocity creative testing system using AI — from generation to scoring to iteration — across Meta, Google, and TikTok."
+featuredImage: "/images/creative-testing.svg"
 ---
 
 ## Why Creative Testing Changed in 2026

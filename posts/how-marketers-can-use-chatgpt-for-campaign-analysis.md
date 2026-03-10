@@ -3,6 +3,7 @@ title: "How to Use ChatGPT & Claude for PPC Campaign Analysis"
 date: "2026-03-08"
 category: "guides"
 excerpt: "A practical guide to using AI assistants for ad campaign analysis — with real prompts, workflows, and the new MCP integrations that connect AI directly to your ad accounts."
+featuredImage: "/images/chatgpt-claude-ppc.svg"
 ---
 
 ## AI Campaign Analysis in 2026: It's a Different Game

@@ -3,6 +3,7 @@ title: "Meta's Andromeda Update: What Every Advertiser Needs to Know"
 date: "2026-03-05"
 category: "updates"
 excerpt: "Meta's Andromeda engine has fundamentally changed how ads are delivered. Here's what changed, why your old strategies won't work, and the new playbook for 2026."
+featuredImage: "/images/meta-andromeda.svg"
 ---
 
 ## Andromeda Changed Everything

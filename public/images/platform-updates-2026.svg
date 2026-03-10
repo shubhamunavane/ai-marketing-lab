@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669"/>
+      <stop offset="100%" style="stop-color:#0ea5e9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Three platform cards -->
+  <rect x="80" y="140" width="320" height="360" rx="16" fill="rgba(255,255,255,0.1)"/>
+  <rect x="440" y="140" width="320" height="360" rx="16" fill="rgba(255,255,255,0.1)"/>
+  <rect x="800" y="140" width="320" height="360" rx="16" fill="rgba(255,255,255,0.1)"/>
+  <!-- Google icon area -->
+  <circle cx="240" cy="220" r="36" fill="rgba(255,255,255,0.15)"/>
+  <text x="240" y="228" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="rgba(255,255,255,0.6)" text-anchor="middle">G</text>
+  <rect x="140" y="280" width="200" height="12" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <rect x="140" y="304" width="160" height="10" rx="4" fill="rgba(255,255,255,0.12)"/>
+  <rect x="140" y="326" width="180" height="10" rx="4" fill="rgba(255,255,255,0.12)"/>
+  <rect x="140" y="380" width="80" height="30" rx="6" fill="rgba(255,255,255,0.2)"/>
+  <!-- Meta icon area -->
+  <circle cx="600" cy="220" r="36" fill="rgba(255,255,255,0.15)"/>
+  <text x="600" y="228" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="rgba(255,255,255,0.6)" text-anchor="middle">M</text>
+  <rect x="500" y="280" width="200" height="12" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <rect x="500" y="304" width="160" height="10" rx="4" fill="rgba(255,255,255,0.12)"/>
+  <rect x="500" y="326" width="180" height="10" rx="4" fill="rgba(255,255,255,0.12)"/>
+  <rect x="500" y="380" width="80" height="30" rx="6" fill="rgba(255,255,255,0.2)"/>
+  <!-- TikTok icon area -->
+  <circle cx="960" cy="220" r="36" fill="rgba(255,255,255,0.15)"/>
+  <text x="960" y="228" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="rgba(255,255,255,0.6)" text-anchor="middle">T</text>
+  <rect x="860" y="280" width="200" height="12" rx="4" fill="rgba(255,255,255,0.2)"/>
+  <rect x="860" y="304" width="160" height="10" rx="4" fill="rgba(255,255,255,0.12)"/>
+  <rect x="860" y="326" width="180" height="10" rx="4" fill="rgba(255,255,255,0.12)"/>
+  <rect x="860" y="380" width="80" height="30" rx="6" fill="rgba(255,255,255,0.2)"/>
+  <text x="600" y="70" font-family="system-ui, sans-serif" font-size="18" font-weight="600" fill="rgba(255,255,255,0.6)" text-anchor="middle">AI MARKETING LAB</text>
+</svg>

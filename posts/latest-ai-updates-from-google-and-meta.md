@@ -3,6 +3,7 @@ title: "Google, Meta & TikTok AI Ad Updates: What Changed in Early 2026"
 date: "2026-03-09"
 category: "updates"
 excerpt: "A breakdown of the latest AI-powered advertising features from Google Ads, Meta Ads, and TikTok — and what they mean for media buyers."
+featuredImage: "/images/platform-updates-2026.svg"
 ---
 
 ## The Platforms Are Going All-In on AI

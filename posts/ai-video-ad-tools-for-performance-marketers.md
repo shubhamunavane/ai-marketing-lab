@@ -3,6 +3,7 @@ title: "AI Video Ad Tools for Performance Marketers: What Actually Works"
 date: "2026-03-01"
 category: "tools"
 excerpt: "Video ads drive the best results on every platform. Here are the AI tools that let performance marketers create high-converting video ads without a production team."
+featuredImage: "/images/video-ad-tools.svg"
 ---
 
 ## Video Is the Highest-Performing Ad Format — AI Makes It Accessible

@@ -3,6 +3,7 @@ title: "TikTok Smart+ & Symphony AI: The Complete Advertiser Guide"
 date: "2026-03-03"
 category: "updates"
 excerpt: "TikTok's Smart+ campaigns got major upgrades in January 2026. Here's everything media buyers need to know about the new AI features, Symphony automation, and Smart+ Catalog Ads."
+featuredImage: "/images/tiktok-smart-plus.svg"
 ---
 
 ## TikTok's AI Advertising Just Got Serious
