@@ -29,7 +29,7 @@ export default function Home() {
       <div className="mx-auto max-w-5xl px-6 pb-24">
         {/* AI Marketing Insights */}
         {tools.length > 0 && (
-          <HomeSection title="AI Marketing Insights" href="/tools" delay={0}>
+          <HomeSection title="AI Marketing Insights" href="/insights" delay={0}>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {tools.map((post) => (
                 <PostCard key={post.slug} {...post} />

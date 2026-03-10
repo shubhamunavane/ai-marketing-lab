@@ -34,8 +34,9 @@ export default function Navbar() {
   const links = [
     { href: "/", label: "Home" },
     { href: "/tools", label: "Tools" },
-    { href: "/updates", label: "Updates" },
+    { href: "/insights", label: "Insights" },
     { href: "/guides", label: "Guides" },
+    { href: "/updates", label: "Updates" },
     { href: "/about", label: "About" },
   ];
 

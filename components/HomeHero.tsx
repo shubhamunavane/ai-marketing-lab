@@ -25,7 +25,7 @@ export default function HomeHero() {
           ease: [0.21, 0.47, 0.32, 0.98],
         }}
       >
-        AI tools, updates and practical guides for media buyers and advertisers.
+        Discover AI tools, marketing insights, and practical guides for media buyers and advertisers.
       </motion.p>
 
       <motion.div
@@ -42,13 +42,13 @@ export default function HomeHero() {
           href="/tools"
           className="rounded-lg bg-[var(--color-accent)] px-5 py-2.5 text-sm font-medium text-white shadow-[0_0_20px_rgba(124,140,255,0.2)] transition-all hover:bg-[var(--color-accent-hover)] hover:shadow-[0_0_30px_rgba(124,140,255,0.3)]"
         >
-          Explore Tools
+          Explore AI Tools
         </Link>
         <Link
           href="/guides"
           className="rounded-lg border border-[var(--color-border)] px-5 py-2.5 text-sm font-medium text-[var(--color-secondary)] transition-all hover:border-[var(--color-border-hover)] hover:text-[var(--color-foreground)]"
         >
-          Read Guides
+          Read AI Guides
         </Link>
       </motion.div>
     </section>
