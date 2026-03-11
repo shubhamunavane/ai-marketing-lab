@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a"/>
+      <stop offset="100%" style="stop-color:#0f1729"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7C8CFF;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#7C8CFF;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Left node: Programmatic (Criteo) -->
+  <rect x="100" y="240" width="200" height="110" rx="14" fill="rgba(124,140,255,0.08)" stroke="rgba(124,140,255,0.25)" stroke-width="1.5"/>
+  <text x="200" y="285" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="rgba(255,255,255,0.6)" text-anchor="middle">Programmatic</text>
+  <text x="200" y="305" font-family="system-ui, sans-serif" font-size="11" fill="rgba(255,255,255,0.3)" text-anchor="middle">~17,000 advertisers</text>
+  <text x="200" y="325" font-family="system-ui, sans-serif" font-size="11" fill="rgba(124,140,255,0.5)" text-anchor="middle">via Criteo</text>
+
+  <!-- Flow arrow left to center -->
+  <line x1="305" y1="295" x2="430" y2="295" stroke="url(#flow)" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <polygon points="430,290 442,295 430,300" fill="rgba(124,140,255,0.4)"/>
+
+  <!-- Center node: ChatGPT Ads -->
+  <rect x="450" y="195" width="300" height="200" rx="16" fill="rgba(124,140,255,0.1)" stroke="rgba(124,140,255,0.35)" stroke-width="1.5"/>
+  <!-- Inner chat lines -->
+  <rect x="480" y="225" width="160" height="10" rx="5" fill="rgba(255,255,255,0.12)"/>
+  <rect x="480" y="245" width="120" height="10" rx="5" fill="rgba(255,255,255,0.08)"/>
+  <!-- Ad placement box -->
+  <rect x="480" y="270" width="240" height="60" rx="8" fill="rgba(124,140,255,0.12)" stroke="rgba(124,140,255,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+  <rect x="492" y="280" width="28" height="14" rx="3" fill="rgba(124,140,255,0.35)"/>
+  <text x="506" y="291" font-family="system-ui, sans-serif" font-size="8" font-weight="700" fill="rgba(255,255,255,0.7)" text-anchor="middle">AD</text>
+  <rect x="530" y="283" width="100" height="7" rx="3" fill="rgba(255,255,255,0.1)"/>
+  <rect x="530" y="296" width="70" height="7" rx="3" fill="rgba(255,255,255,0.07)"/>
+  <rect x="640" y="281" width="56" height="20" rx="5" fill="rgba(124,140,255,0.2)"/>
+  <!-- CPM tag -->
+  <text x="600" y="358" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="rgba(124,140,255,0.6)" text-anchor="middle">~$60 CPM · $200K min.</text>
+
+  <!-- Flow arrow center to right -->
+  <line x1="755" y1="295" x2="878" y2="295" stroke="url(#flow)" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <polygon points="878,290 890,295 878,300" fill="rgba(124,140,255,0.4)"/>
+
+  <!-- Right node: Brand Safety / Measurement gap -->
+  <rect x="900" y="240" width="200" height="110" rx="14" fill="rgba(255,80,80,0.05)" stroke="rgba(255,100,100,0.2)" stroke-width="1.5"/>
+  <text x="1000" y="285" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="rgba(255,255,255,0.6)" text-anchor="middle">Measurement</text>
+  <text x="1000" y="305" font-family="system-ui, sans-serif" font-size="11" fill="rgba(255,255,255,0.3)" text-anchor="middle">No attribution</text>
+  <text x="1000" y="325" font-family="system-ui, sans-serif" font-size="11" fill="rgba(255,120,120,0.6)" text-anchor="middle">Gap unresolved</text>
+
+  <!-- Floating data dots -->
+  <circle cx="380" cy="180" r="3" fill="rgba(124,140,255,0.2)"/>
+  <circle cx="340" cy="420" r="4" fill="rgba(124,140,255,0.15)"/>
+  <circle cx="820" cy="160" r="3" fill="rgba(124,140,255,0.2)"/>
+  <circle cx="870" cy="430" r="4" fill="rgba(124,140,255,0.12)"/>
+
+  <!-- Watermark -->
+  <text x="600" y="560" font-family="system-ui, sans-serif" font-size="16" font-weight="600" fill="rgba(255,255,255,0.2)" text-anchor="middle" letter-spacing="2">AI MARKET LAB</text>
+</svg>
