@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [lightMode, setLightMode] = useState(false);
@@ -137,31 +138,43 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Dropdown menu — absolute, high z-index */}
-        {menuOpen && (
-          <div
-            ref={menuRef}
-            className="absolute right-6 top-full z-[60] mt-1 w-48 rounded-xl border border-[var(--color-border)] bg-[var(--color-background)]/95 p-2 shadow-lg backdrop-blur-xl"
-          >
-            {links.map((link) => {
-              const isActive = pathname === link.href;
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  className={`block rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
-                    isActive
-                      ? "text-[var(--color-foreground)] bg-[var(--color-accent-muted)]"
-                      : "text-[var(--color-muted)] hover:text-[var(--color-foreground)] hover:bg-[var(--color-accent-muted)]"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
-          </div>
-        )}
+        {/* Dropdown menu — animated */}
+        <AnimatePresence>
+          {menuOpen && (
+            <motion.div
+              ref={menuRef}
+              initial={{ opacity: 0, y: -8, scale: 0.96 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -8, scale: 0.96 }}
+              transition={{ duration: 0.15, ease: [0.21, 0.47, 0.32, 0.98] }}
+              className="absolute right-6 top-full z-[60] mt-1 w-48 origin-top-right rounded-xl border border-[var(--color-border)] bg-[var(--color-background)]/95 p-2 shadow-lg backdrop-blur-xl"
+            >
+              {links.map((link, i) => {
+                const isActive = pathname === link.href;
+                return (
+                  <motion.div
+                    key={link.href}
+                    initial={{ opacity: 0, x: -8 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.15, delay: i * 0.03 }}
+                  >
+                    <Link
+                      href={link.href}
+                      onClick={() => setMenuOpen(false)}
+                      className={`block rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+                        isActive
+                          ? "text-[var(--color-foreground)] bg-[var(--color-accent-muted)]"
+                          : "text-[var(--color-muted)] hover:text-[var(--color-foreground)] hover:bg-[var(--color-accent-muted)]"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </nav>
   );

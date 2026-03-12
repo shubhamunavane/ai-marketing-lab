@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { formatDate } from "@/lib/posts";
 
 interface PostCardProps {
   slug: string;
@@ -8,6 +9,7 @@ interface PostCardProps {
   category: string;
   excerpt: string;
   featuredImage?: string;
+  readingTime?: number;
 }
 
 const categoryColors: Record<string, string> = {
@@ -25,6 +27,7 @@ export default function PostCard({
   category,
   excerpt,
   featuredImage,
+  readingTime,
 }: PostCardProps) {
   return (
     <Link href={`/blog/${slug}`} className="group block h-full">
@@ -51,8 +54,13 @@ export default function PostCard({
               </span>
             )}
             <time className="text-[11px] text-[var(--color-muted)]">
-              {date}
+              {formatDate(date)}
             </time>
+            {readingTime && (
+              <span className="text-[11px] text-[var(--color-muted)]">
+                {readingTime} min read
+              </span>
+            )}
           </div>
           <h3 className="mb-2 text-[15px] font-semibold leading-snug text-[var(--color-foreground)] transition-colors duration-200 group-hover:text-[var(--color-accent)]">
             {title}

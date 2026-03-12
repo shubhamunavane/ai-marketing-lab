@@ -17,6 +17,21 @@ export interface PostMeta {
   category: PostCategory;
   excerpt: string;
   featuredImage?: string;
+  readingTime: number;
+}
+
+export function formatDate(dateStr: string): string {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
+function estimateReadingTime(content: string): number {
+  const words = content.trim().split(/\s+/).length;
+  return Math.max(1, Math.ceil(words / 200));
 }
 
 export interface Post extends PostMeta {
@@ -31,7 +46,7 @@ export function getAllPosts(): PostMeta[] {
       const slug = fileName.replace(/\.md$/, "");
       const fullPath = path.join(postsDirectory, fileName);
       const fileContents = fs.readFileSync(fullPath, "utf8");
-      const { data } = matter(fileContents);
+      const { data, content } = matter(fileContents);
 
       const rawCategory = data.category?.toLowerCase();
       const category: PostCategory = VALID_CATEGORIES.includes(rawCategory)
@@ -45,6 +60,7 @@ export function getAllPosts(): PostMeta[] {
         category,
         excerpt: data.excerpt,
         featuredImage: data.featuredImage || undefined,
+        readingTime: estimateReadingTime(content),
       };
     });
 
@@ -55,6 +71,12 @@ export function getAllPosts(): PostMeta[] {
 
 export function getPostsByCategory(category: string): PostMeta[] {
   return getAllPosts().filter((post) => post.category === category);
+}
+
+export function getRelatedPosts(slug: string, category: string, limit = 3): PostMeta[] {
+  return getAllPosts()
+    .filter((post) => post.slug !== slug && post.category === category)
+    .slice(0, limit);
 }
 
 export function getAllSlugs(): string[] {
@@ -84,6 +106,7 @@ export async function getPostBySlug(slug: string): Promise<Post> {
     category,
     excerpt: data.excerpt,
     featuredImage: data.featuredImage || undefined,
+    readingTime: estimateReadingTime(content),
     contentHtml,
   };
 }

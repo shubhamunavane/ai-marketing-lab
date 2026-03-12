@@ -23,9 +23,11 @@ export default function Footer() {
               </p>
               <ul className="space-y-2.5">
                 {[
+                  { href: "/insights", label: "Insights" },
                   { href: "/tools", label: "Tools" },
-                  { href: "/updates", label: "Updates" },
                   { href: "/guides", label: "Guides" },
+                  { href: "/updates", label: "Updates" },
+                  { href: "/prompts", label: "Prompts" },
                 ].map((link) => (
                   <li key={link.href}>
                     <Link

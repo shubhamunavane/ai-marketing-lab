@@ -54,6 +54,21 @@ body {
   color: white;
 }
 
+/* ─── Animated gradient text ─── */
+.hero-gradient-text {
+  background: linear-gradient(90deg, #7C8CFF, #A78BFA, #F472B6, #7C8CFF);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 6s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
 /* ─── Hero Typography ─── */
 .heading-hero {
   font-size: 3.5rem;
