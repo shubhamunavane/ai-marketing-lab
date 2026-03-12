@@ -23,7 +23,7 @@ export default function Footer() {
               </p>
               <ul className="space-y-2.5">
                 {[
-                  { href: "/insights", label: "Insights" },
+                  { href: "/insights", label: "AI Marketing Insights" },
                   { href: "/tools", label: "Tools" },
                   { href: "/guides", label: "Guides" },
                   { href: "/updates", label: "Updates" },

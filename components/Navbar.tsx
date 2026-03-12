@@ -62,7 +62,7 @@ export default function Navbar() {
     { href: "/", label: "Home" },
     { href: "/tools", label: "Tools" },
     { href: "/prompts", label: "Prompts" },
-    { href: "/insights", label: "Insights" },
+    { href: "/insights", label: "AI Marketing Insights" },
     { href: "/guides", label: "Guides" },
     { href: "/updates", label: "Updates" },
     { href: "/about", label: "About" },
