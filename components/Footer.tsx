@@ -24,7 +24,7 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {[
                   { href: "/insights", label: "AI Marketing Insights" },
-                  { href: "/tools", label: "Tools" },
+                  { href: "/tools", label: "AI Marketing Tools" },
                   { href: "/guides", label: "AI Marketing Guides" },
                   { href: "/updates", label: "Updates" },
                   { href: "/prompts", label: "Prompts" },

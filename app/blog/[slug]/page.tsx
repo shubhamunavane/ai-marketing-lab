@@ -43,7 +43,7 @@ export async function generateMetadata({
 
 const categoryLabels: Record<string, { label: string; href: string }> = {
   insights: { label: "AI Marketing Insights", href: "/insights" },
-  tools: { label: "AI Tools", href: "/tools" },
+  tools: { label: "AI Marketing Tools", href: "/tools" },
   guides: { label: "AI Marketing Guides", href: "/guides" },
   updates: { label: "AI Updates", href: "/updates" },
   prompts: { label: "AI Prompts", href: "/prompts" },

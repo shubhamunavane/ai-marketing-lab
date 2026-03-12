@@ -40,7 +40,7 @@ export default function AboutPage() {
           <div className="grid gap-4 sm:grid-cols-3">
             {[
               {
-                title: "AI Tools",
+                title: "AI Marketing Tools",
                 desc: "Reviews and breakdowns of the best AI tools for ad creatives, copy, targeting, and analytics.",
               },
               {

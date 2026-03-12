@@ -9,7 +9,7 @@ const categoryMeta: Record<string, { title: string; description: string }> = {
       "In-depth analysis of AI tools, strategies, and trends for marketers and media buyers.",
   },
   tools: {
-    title: "AI Tools Articles",
+    title: "AI Marketing Tools Articles",
     description:
       "Reviews, comparisons, and deep dives into the best AI tools for advertisers.",
   },

@@ -77,7 +77,7 @@ function getResult(score: number): Result {
       description:
         "You're just getting started with AI in marketing. There's huge potential to gain a competitive edge by adopting AI tools now.",
       recommendations: [
-        { label: "Start with our AI Tools Directory", href: "/tools" },
+        { label: "Start with our AI Marketing Tools Directory", href: "/tools" },
         { label: "Read our beginner guides", href: "/guides" },
       ],
     };
