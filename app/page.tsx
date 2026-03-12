@@ -41,7 +41,7 @@ export default function Home() {
 
         {/* AI Tools */}
         {tools.length > 0 && (
-          <HomeSection title="AI Tools" href="/tools" delay={0.05}>
+          <HomeSection title="AI Tools" href="/insights?category=tools" delay={0.05}>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {tools.map((post) => (
                 <PostCard key={post.slug} {...post} />
