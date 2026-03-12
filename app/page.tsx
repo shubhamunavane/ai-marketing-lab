@@ -6,10 +6,10 @@ import HomeHero from "@/components/HomeHero";
 import HomeSection from "@/components/HomeSection";
 
 export default function Home() {
-  const insights = getPostsByCategory("insights").slice(0, 3);
-  const tools = getPostsByCategory("tools").slice(0, 3);
-  const guides = getPostsByCategory("guides").slice(0, 3);
   const updates = getPostsByCategory("updates").slice(0, 3);
+  const insights = getPostsByCategory("insights").slice(0, 3);
+  const guides = getPostsByCategory("guides").slice(0, 3);
+  const tools = getPostsByCategory("tools").slice(0, 3);
 
   return (
     <>
@@ -28,22 +28,22 @@ export default function Home() {
       </div>
 
       <div className="mx-auto max-w-5xl px-6 pb-24">
-        {/* AI Marketing Insights */}
-        {insights.length > 0 && (
-          <HomeSection title="AI Marketing Insights" href="/insights" delay={0}>
+        {/* AI Marketing Updates */}
+        {updates.length > 0 && (
+          <HomeSection title="AI Marketing Updates" href="/updates" delay={0}>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {insights.map((post) => (
+              {updates.map((post) => (
                 <PostCard key={post.slug} {...post} />
               ))}
             </div>
           </HomeSection>
         )}
 
-        {/* AI Tools */}
-        {tools.length > 0 && (
-          <HomeSection title="AI Marketing Tools" href="/insights?category=tools" delay={0.05}>
+        {/* AI Marketing Insights */}
+        {insights.length > 0 && (
+          <HomeSection title="AI Marketing Insights" href="/insights" delay={0.05}>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {tools.map((post) => (
+              {insights.map((post) => (
                 <PostCard key={post.slug} {...post} />
               ))}
             </div>
@@ -61,16 +61,44 @@ export default function Home() {
           </HomeSection>
         )}
 
-        {/* AI Marketing Updates */}
-        {updates.length > 0 && (
-          <HomeSection title="AI Marketing Updates" href="/updates" delay={0.15}>
+        {/* AI Marketing Tools */}
+        {tools.length > 0 && (
+          <HomeSection title="AI Marketing Tools" href="/insights?category=tools" delay={0.15}>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {updates.map((post) => (
+              {tools.map((post) => (
                 <PostCard key={post.slug} {...post} />
               ))}
             </div>
           </HomeSection>
         )}
+
+        {/* AI Marketing Prompts */}
+        <HomeSection title="AI Marketing Prompts" href="/prompts" delay={0.2}>
+          <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-card)] p-8">
+            <p className="mb-4 max-w-lg text-sm leading-relaxed text-[var(--color-muted)]">
+              Copy-paste ready AI prompts for ad creatives, media buying,
+              copywriting, landing pages, video ads, and more.
+            </p>
+            <Link
+              href="/prompts"
+              className="inline-flex items-center gap-1.5 rounded-lg bg-[var(--color-accent)] px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
+            >
+              Browse Prompts
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </Link>
+          </div>
+        </HomeSection>
 
         {/* Newsletter */}
         <div className="mt-20">
