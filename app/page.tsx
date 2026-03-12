@@ -6,9 +6,10 @@ import HomeHero from "@/components/HomeHero";
 import HomeSection from "@/components/HomeSection";
 
 export default function Home() {
+  const insights = getPostsByCategory("insights").slice(0, 3);
   const tools = getPostsByCategory("tools").slice(0, 3);
-  const updates = getPostsByCategory("updates").slice(0, 3);
   const guides = getPostsByCategory("guides").slice(0, 3);
+  const updates = getPostsByCategory("updates").slice(0, 3);
 
   return (
     <>
@@ -28,8 +29,19 @@ export default function Home() {
 
       <div className="mx-auto max-w-5xl px-6 pb-24">
         {/* AI Marketing Insights */}
-        {tools.length > 0 && (
+        {insights.length > 0 && (
           <HomeSection title="AI Marketing Insights" href="/insights" delay={0}>
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {insights.map((post) => (
+                <PostCard key={post.slug} {...post} />
+              ))}
+            </div>
+          </HomeSection>
+        )}
+
+        {/* AI Tools */}
+        {tools.length > 0 && (
+          <HomeSection title="AI Tools" href="/tools" delay={0.05}>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {tools.map((post) => (
                 <PostCard key={post.slug} {...post} />
@@ -40,7 +52,7 @@ export default function Home() {
 
         {/* AI Marketing Guides */}
         {guides.length > 0 && (
-          <HomeSection title="AI Marketing Guides" href="/guides" delay={0.05}>
+          <HomeSection title="AI Marketing Guides" href="/guides" delay={0.1}>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {guides.map((post) => (
                 <PostCard key={post.slug} {...post} />
@@ -51,7 +63,7 @@ export default function Home() {
 
         {/* AI Marketing Updates */}
         {updates.length > 0 && (
-          <HomeSection title="AI Marketing Updates" href="/updates" delay={0.1}>
+          <HomeSection title="AI Marketing Updates" href="/updates" delay={0.15}>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {updates.map((post) => (
                 <PostCard key={post.slug} {...post} />

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default function InsightsPage() {
-  const posts = getPostsByCategory("tools");
+  const posts = getPostsByCategory("insights");
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-16">

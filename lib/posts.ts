@@ -6,11 +6,15 @@ import html from "remark-html";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
+export type PostCategory = "insights" | "tools" | "guides" | "updates" | "prompts";
+
+const VALID_CATEGORIES: PostCategory[] = ["insights", "tools", "guides", "updates", "prompts"];
+
 export interface PostMeta {
   slug: string;
   title: string;
   date: string;
-  category: string;
+  category: PostCategory;
   excerpt: string;
   featuredImage?: string;
 }
@@ -29,11 +33,16 @@ export function getAllPosts(): PostMeta[] {
       const fileContents = fs.readFileSync(fullPath, "utf8");
       const { data } = matter(fileContents);
 
+      const rawCategory = data.category?.toLowerCase();
+      const category: PostCategory = VALID_CATEGORIES.includes(rawCategory)
+        ? rawCategory
+        : "insights";
+
       return {
         slug,
         title: data.title,
         date: data.date,
-        category: data.category,
+        category,
         excerpt: data.excerpt,
         featuredImage: data.featuredImage || undefined,
       };
@@ -63,11 +72,16 @@ export async function getPostBySlug(slug: string): Promise<Post> {
   const processedContent = await remark().use(html).process(content);
   const contentHtml = processedContent.toString();
 
+  const rawCategory = data.category?.toLowerCase();
+  const category: PostCategory = VALID_CATEGORIES.includes(rawCategory)
+    ? rawCategory
+    : "insights";
+
   return {
     slug,
     title: data.title,
     date: data.date,
-    category: data.category,
+    category,
     excerpt: data.excerpt,
     featuredImage: data.featuredImage || undefined,
     contentHtml,

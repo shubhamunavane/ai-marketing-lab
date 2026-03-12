@@ -1,7 +1,7 @@
 ---
 title: "Ads Inside ChatGPT: What the Early Experiments Mean for Marketers"
 date: "2026-03-11"
-category: "tools"
+category: "insights"
 excerpt: "Brands are beginning to test ads inside ChatGPT, but high CPMs, limited transparency, and unclear measurement make this a watch-and-learn moment rather than a budget shift."
 featuredImage: "/images/chatgpt-ads-marketers.svg"
 ---
