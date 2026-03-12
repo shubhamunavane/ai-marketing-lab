@@ -60,11 +60,11 @@ export default function Navbar() {
 
   const links = [
     { href: "/", label: "Home" },
-    { href: "/tools", label: "AI Marketing Tools" },
+    { href: "/tools", label: "Tools" },
     { href: "/prompts", label: "Prompts" },
-    { href: "/insights", label: "AI Marketing Insights" },
-    { href: "/guides", label: "AI Marketing Guides" },
-    { href: "/updates", label: "AI Marketing Updates" },
+    { href: "/insights", label: "Insights" },
+    { href: "/guides", label: "Guides" },
+    { href: "/updates", label: "Updates" },
     { href: "/about", label: "About" },
   ];
 
