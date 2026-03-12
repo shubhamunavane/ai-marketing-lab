@@ -48,7 +48,7 @@ export default function AboutPage() {
                 desc: "The latest AI announcements from major ad platforms and tech companies.",
               },
               {
-                title: "AI Guides",
+                title: "AI Marketing Guides",
                 desc: "Step-by-step tutorials on using AI tools and features in your marketing workflow.",
               },
             ].map((item) => (

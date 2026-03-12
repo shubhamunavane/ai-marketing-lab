@@ -25,7 +25,7 @@ export default function Footer() {
                 {[
                   { href: "/insights", label: "AI Marketing Insights" },
                   { href: "/tools", label: "Tools" },
-                  { href: "/guides", label: "Guides" },
+                  { href: "/guides", label: "AI Marketing Guides" },
                   { href: "/updates", label: "Updates" },
                   { href: "/prompts", label: "Prompts" },
                 ].map((link) => (

@@ -3,9 +3,9 @@ import { getPostsByCategory } from "@/lib/posts";
 import PostCard from "@/components/PostCard";
 
 export const metadata: Metadata = {
-  title: "AI Guides",
+  title: "AI Marketing Guides",
   description:
-    "Practical AI guides and tutorials for media buyers and advertisers.",
+    "Practical AI marketing guides and tutorials for media buyers and advertisers.",
 };
 
 export default function GuidesPage() {
@@ -15,7 +15,7 @@ export default function GuidesPage() {
     <div className="mx-auto max-w-5xl px-6 py-16">
       <div className="mb-12">
         <h1 className="heading-section mb-3 text-[var(--color-foreground)]">
-          AI Guides
+          AI Marketing Guides
         </h1>
         <p className="max-w-lg text-sm leading-relaxed text-[var(--color-muted)]">
           Practical guides and tutorials for using AI in your marketing
