@@ -3,7 +3,7 @@ import { getPostsByCategory } from "@/lib/posts";
 import PostCard from "@/components/PostCard";
 
 export const metadata: Metadata = {
-  title: "AI Updates",
+  title: "AI Marketing Updates",
   description:
     "Stay up to date with the latest AI news and updates relevant to advertisers and media buyers.",
 };
@@ -15,7 +15,7 @@ export default function UpdatesPage() {
     <div className="mx-auto max-w-5xl px-6 py-16">
       <div className="mb-12">
         <h1 className="heading-section mb-3 text-[var(--color-foreground)]">
-          AI Updates
+          AI Marketing Updates
         </h1>
         <p className="max-w-lg text-sm leading-relaxed text-[var(--color-muted)]">
           The latest AI news and platform changes relevant to advertisers and

@@ -44,7 +44,7 @@ export default function AboutPage() {
                 desc: "Reviews and breakdowns of the best AI tools for ad creatives, copy, targeting, and analytics.",
               },
               {
-                title: "AI Updates",
+                title: "AI Marketing Updates",
                 desc: "The latest AI announcements from major ad platforms and tech companies.",
               },
               {

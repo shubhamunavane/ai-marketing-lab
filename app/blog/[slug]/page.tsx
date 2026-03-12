@@ -45,7 +45,7 @@ const categoryLabels: Record<string, { label: string; href: string }> = {
   insights: { label: "AI Marketing Insights", href: "/insights" },
   tools: { label: "AI Marketing Tools", href: "/tools" },
   guides: { label: "AI Marketing Guides", href: "/guides" },
-  updates: { label: "AI Updates", href: "/updates" },
+  updates: { label: "AI Marketing Updates", href: "/updates" },
   prompts: { label: "AI Prompts", href: "/prompts" },
 };
 
